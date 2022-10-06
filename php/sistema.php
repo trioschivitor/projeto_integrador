@@ -1,21 +1,23 @@
 <?php
 
- session_start(); 
+//  session_start(); 
+//   include_once 'config.php';
 
-//  if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+// if(isset($_SESSION['login']) and isset($_SESSION['senha'])){
 
-  // unset($_SESSION['nome']);
-  // unset($_SESSION['senha']);
-  // header('Location: loginbolinha.php');
+//   $login = ucfirst($_SESSION['login']);
+
+// }else{
+//   header('Location:loginbolinha.php');
+//   unset($_SESSION['login']);
+//   unset($_SESSION['senha']);
 // }
 
- if(isset($_POST["submit"])){
-   include_once "config.php";
-
-
+if(isset($_POST["submit"])){
+   
   $tiposanguineo = $_POST['tiposanguineo'];
   
-  $sql = "SELECT FROM cad_pf WHERE tiposanguineo LIKE '%tiposanguineo%' ";
+  $sql = "SELECT * FROM cad_pf WHERE tiposanguineo LIKE '%tiposanguineo%' ";
 
   $resultado = $conexao->query($sql);
  }
@@ -37,12 +39,18 @@
  
   <style>
     body{
-      background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: white;
     }
     .tabela{
-      background: grey;
-      width: 400px;
+      background-color: rgba(206, 107, 107);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
 
     }
   </style>

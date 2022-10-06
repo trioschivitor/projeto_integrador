@@ -59,9 +59,9 @@ input {
   <div class="bolinha">
     <h1>Login</h1>
     <form action="testelogin.php" method="POST">
-    <input type="text" name="login" placeholder="Login">
+    <input type="text" name="login">
     <br><br>
-    <input type="password" name="senha" placeholder="Senha">
+    <input type="password" name="senha">
     <br><br>
     <input class="inputsubmit" type="submit" name="submit" value="Entrar">
 </form>
